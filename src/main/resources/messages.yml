@@ -1,0 +1,163 @@
+# All player-facing chat text (MiniMessage format). Placeholders appear as <name>.
+# <prefix>, <symbol> and <currency> work in every message.
+
+prefix: "<dark_gray>[<gold>Token SMP</gold>]</dark_gray> "
+
+# ── General ──────────────────────────────────────────────
+no-permission: "<prefix><red>You do not have permission to do that."
+player-only: "<prefix><red>Only players can use this command."
+unknown-player: "<prefix><red>No player named <white><player></white> has joined this server."
+invalid-amount: "<prefix><red>Enter a valid amount, for example <white>500</white> or <white>2k</white>."
+not-enough: "<prefix><red>You need <white><amount> <symbol></white> but only have <white><balance> <symbol></white>."
+self-target: "<prefix><red>You cannot do that to yourself."
+cancelled: "<prefix><gray>Cancelled."
+prompt-search: "<prefix><gray>Type a player name in chat. Type <white>cancel</white> to abort."
+prompt-amount: "<prefix><gray>Type an amount in chat, for example <white>750</white>. Type <white>cancel</white> to abort."
+prompt-timeout: "<prefix><gray>Input timed out."
+
+# ── Tokens ───────────────────────────────────────────────
+balance: "<prefix><gray>Balance: <gold><balance> <symbol></gold> <dark_gray>(rank <white>#<rank></white>)"
+pay-below-min: "<prefix><red>The minimum transfer is <white><min> <symbol></white>."
+pay-same-network: "<prefix><red>You cannot send tokens to an account on your own network."
+pay-sent: "<prefix><green>Sent <white><amount> <symbol></white> to <white><player></white>."
+pay-received: "<prefix><green>Received <white><amount> <symbol></white> from <white><player></white>."
+top-header: "<prefix><gold><title>"
+top-line: "<gray><rank>. <white><player> <dark_gray>» <gold><value>"
+top-empty: "<gray>Nothing to show yet."
+
+# ── Kills and deaths ─────────────────────────────────────
+kill-reward: "<prefix><green>You killed <white><victim></white>. <gold>+<total> <symbol></gold> <gray>(reward <reward> + stolen <stolen>)"
+death-loss: "<prefix><red>Killed by <white><killer></white>. <gold>-<lost> <symbol></gold> <gray>(<remaining> left)"
+kill-blocked-network: "<prefix><gray>No rewards: you and <white><victim></white> share a network."
+kill-blocked-repeat: "<prefix><gray>No rewards: you recently killed <white><victim></white>. Try someone else."
+combat-tagged: "<red>In combat! Logging out now counts as a death."
+combat-log: "<prefix><red><player></red><gray> logged out in combat and lost tokens."
+
+# ── Bounties ─────────────────────────────────────────────
+bounty-too-low: "<prefix><red>The minimum bounty is <white><min> <symbol></white>."
+bounty-cap: "<prefix><red>A bounty cannot exceed <white><max> <symbol></white>. Current: <white><current> <symbol></white>."
+bounty-placed: "<prefix><green>You placed <white><amount> <symbol></white> on <white><target></white>. Total: <gold><total> <symbol></gold>."
+bounty-on-you: "<prefix><red><placer></red><gray> placed <white><amount> <symbol></white> on you. Total: <white><total> <symbol></white>."
+bounty-broadcast-placed: "<prefix><gold><placer></gold><gray> put <gold><amount> <symbol></gold><gray> on <red><target></red><gray>. Total bounty: <gold><total> <symbol></gold>"
+bounty-claimed: "<prefix><gold>Bounty claimed! <white>+<amount> <symbol></white> for killing <white><target></white>."
+bounty-broadcast-claimed: "<prefix><gold><killer></gold><gray> claimed the <gold><amount> <symbol></gold><gray> bounty on <red><target></red><gray>!"
+bounty-refunded: "<prefix><gray>Your <white><amount> <symbol></white> contribution to the bounty on <white><target></white> was refunded."
+bounty-check: "<prefix><gray><target> has a bounty of <gold><total> <symbol></gold> <dark_gray>(<count> contributor(s))"
+bounty-check-none: "<prefix><gray><target> has no bounty."
+bounty-list-header: "<prefix><gold><title> <dark_gray>(page <page>/<pages>)"
+bounty-list-line: "<gray><rank>. <red><target> <dark_gray>» <gold><total> <symbol>"
+bounty-list-empty: "<prefix><gray>There are no active bounties."
+
+# ── Settings feedback ────────────────────────────────────
+setting-on: "<prefix><gray><setting>: <green>on"
+setting-off: "<prefix><gray><setting>: <red>off"
+
+# ── Admin ────────────────────────────────────────────────
+admin-reloaded: "<prefix><green>Configuration reloaded."
+admin-balance: "<prefix><gray><player> has <gold><balance> <symbol></gold>."
+admin-adjusted: "<prefix><green>Done. <white><player></white> now has <gold><balance> <symbol></gold>."
+admin-bounty-cleared: "<prefix><green>Cleared the bounty on <white><player></white>. Contributions were refunded."
+admin-usage: "<prefix><gray>Admin: /tokensmp <white>reload | balance <p> | give <p> <n> | take <p> <n> | set <p> <n> | clearbounty <p> | ledger [n] | hologram create|remove|list"
+admin-hologram-created: "<prefix><green>Hologram #<id> created (<type>)."
+admin-hologram-removed: "<prefix><green>Hologram #<id> removed."
+admin-hologram-missing: "<prefix><red>No hologram with that id."
+admin-hologram-list: "<prefix><gray>#<id> <white><type> <dark_gray>(<world> <x> <y> <z>)"
+admin-hologram-types: "<prefix><red>Types: <white>richest, kills, bounty, claimed, placed"
+
+# ── Welcome and help ─────────────────────────────────────
+welcome-title: "<gold><bold>Welcome to Token SMP"
+welcome-subtitle: "<gray>Fight, earn tokens, hunt bounties"
+welcome:
+  - ""
+  - "<gold><bold>Welcome to Token SMP, <player>!"
+  - "<gray>A survival server where <white>PvP</white> decides who is richest."
+  - "<gold>◆ <white>Every kill pays <gold><reward> <symbol></gold> plus <gold><steal>%</gold> of the victim's tokens."
+  - "<red>☠ <white>If another player kills you, you lose <red><steal>%</red> of your tokens."
+  - "<yellow>⚑ <white>Spend tokens on bounties. Whoever kills the target collects them."
+  - ""
+  - "<click:run_command:/tutorial><hover:show_text:'Open the tutorial'><green>» Click here or type <white>/tutorial</white> to learn more</hover></click>"
+  - "<click:run_command:/tokensmp><hover:show_text:'Open the main menu'><green>» Type <white>/tokensmp</white> to open the main menu</hover></click>"
+  - ""
+
+help:
+  main:
+    - "<gold><bold>Token SMP help"
+    - "<click:run_command:/help tokens><hover:show_text:'Show token help'><white>/help tokens</white> <gray>- how tokens work</hover></click>"
+    - "<click:run_command:/help bounty><hover:show_text:'Show bounty help'><white>/help bounty</white> <gray>- how bounties work</hover></click>"
+    - "<click:run_command:/help commands><hover:show_text:'List all commands'><white>/help commands</white> <gray>- every command</hover></click>"
+    - "<click:run_command:/tutorial><hover:show_text:'Open the tutorial'><white>/tutorial</white> <gray>- interactive tutorial</hover></click>"
+    - "<click:run_command:/tokensmp><hover:show_text:'Open the menu'><white>/tokensmp</white> <gray>- main menu</hover></click>"
+  tokens:
+    - "<gold><bold>Tokens"
+    - "<gray>Tokens are the server currency and are saved permanently."
+    - "<white>• <gray>Every kill rewards <gold><reward> <symbol></gold>."
+    - "<white>• <gray>Dying to a player costs you <red><steal>%</red> of your tokens; the killer takes them."
+    - "<white>• <gray>Environment deaths and suicides cost nothing and reward nobody."
+    - "<white>• <gray>Logging out in combat counts as a death."
+    - "<white>• <gray>Killing the same player repeatedly pays nothing extra."
+  bounty:
+    - "<gold><bold>Bounties"
+    - "<gray>Put tokens on a player's head. Whoever kills them gets the bounty."
+    - "<white>• <gray>Several players can add to the same bounty."
+    - "<white>• <gray>The cost is deducted immediately. Minimum: <gold><bounty-min> <symbol></gold>."
+    - "<white>• <gray>Bounties are public: see <white>/bounty list</white> and the tab list."
+    - "<white>• <gray>You cannot cash in a bounty you funded; your share is refunded."
+  commands:
+    - "<gold><bold>Commands"
+    - "<white>/tokens <gray>- your balance"
+    - "<white>/tokens pay <player> <amount> <gray>- send tokens"
+    - "<white>/tokens top <gray>- richest players"
+    - "<white>/bounty <player> <amount> <gray>- place a bounty"
+    - "<white>/bounty list <gray>- all active bounties"
+    - "<white>/bounty top <gray>- highest bounties"
+    - "<white>/bounty check <player> <gray>- check one player"
+    - "<white>/tokensmp <gray>- main menu (stats, leaderboards, settings)"
+    - "<white>/tutorial <gray>- interactive tutorial"
+
+# ── Tutorial pages (shown in the tutorial GUI) ───────────
+tutorial:
+  pages:
+    1:
+      title: "Welcome"
+      lines:
+        - "<gray>Token SMP is survival with a"
+        - "<gray>competitive economy."
+        - ""
+        - "<white>Fight players, earn tokens,"
+        - "<white>hunt bounties and become the"
+        - "<gold>richest player on the server."
+    2:
+      title: "Earning tokens"
+      lines:
+        - "<gray>Every player kill pays"
+        - "<gold><reward> <symbol></gold> <gray>plus <gold><steal>%</gold> <gray>of the"
+        - "<gray>victim's balance."
+        - ""
+        - "<gray>Check your balance with"
+        - "<white>/tokens</white><gray>."
+    3:
+      title: "Risk"
+      lines:
+        - "<gray>If a player kills you, you lose"
+        - "<red><steal>%</red> <gray>of your tokens."
+        - "<gray>The killer receives them."
+        - ""
+        - "<gray>Logging out in combat counts"
+        - "<gray>as a death."
+    4:
+      title: "Bounties"
+      lines:
+        - "<gray>Spend tokens to put a bounty on"
+        - "<gray>an enemy. Whoever kills them"
+        - "<gray>collects the whole bounty."
+        - ""
+        - "<gray>Open it from the main menu or"
+        - "<white>/bounty<gray>."
+    5:
+      title: "Commands"
+      lines:
+        - "<white>/tokensmp <gray>main menu"
+        - "<white>/tokens pay <gray>send tokens"
+        - "<white>/bounty <gray>bounty menu"
+        - "<white>/help <gray>chat help"
+        - "<white>/tutorial <gray>this tutorial"
